@@ -1,0 +1,193 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ page isELIgnored="false" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CrimeEmpire">
+    <meta name="keywords" content="keywords here">
+    <meta name="author" content="P&A">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
+    <title>CrimeEmpire 1.0.0</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css">
+  </head>
+  <body>
+    <!-- MAIN_CONTAINER -->
+    <div class="main_container">
+      <!-- MAIN_BAR & NAV-->
+      <div class="main_bar">
+        <ul class="functions"><span>geos</span>
+          <li class="functions_in hidden geos_info"><span>geos info</span></li>
+          <li class="functions_in hidden desktop_info"><span>desktop info</span></li>
+          <li class="functions_in hidden calculator"><span>calculator</span></li>
+          <li class="functions_in hidden notepad"><span>notepad 2.0</span></li>
+        </ul>
+        <ul class="functions"><span>file</span>
+          <li class="functions_in hidden"><span>open</span></li>
+          <li class="functions_in hidden"><span>duplicate</span></li>
+          <li class="functions_in hidden"><span>rename</span></li>
+          <li class="functions_in hidden"><span>info</span></li>
+          <li class="functions_in hidden"><span>print</span></li>
+          <li class="functions_in hidden"><span>delete</span></li>
+          <li class="functions_in hidden"><span>undo delete</span></li>
+        </ul>
+        <ul class="functions"><span>view</span>
+          <li class="functions_in hidden"><span>by icon</span></li>
+          <li class="functions_in hidden"><span>by size</span></li>
+          <li class="functions_in hidden"><span>by type</span></li>
+          <li class="functions_in hidden"><span>by date</span></li>
+          <li class="functions_in hidden"><span>by name</span></li>
+        </ul>
+        <ul class="functions"><span>disc</span>
+          <li class="functions_in hidden"><span>open</span></li>
+          <li class="functions_in hidden"><span>close</span></li>
+          <li class="functions_in hidden"><span>rename</span></li>
+          <li class="functions_in hidden"><span>copy</span></li>
+          <li class="functions_in hidden"><span>validate</span></li>
+          <li class="functions_in hidden"><span>erase</span></li>
+          <li class="functions_in hidden"><span>format</span></li>
+        </ul>
+        <ul class="functions"><span>select</span>
+          <li class="functions_in hidden"><span>all pages</span></li>
+          <li class="functions_in hidden"><span>page file</span></li>
+          <li class="functions_in hidden"><span>border files</span></li>
+        </ul>
+        <ul class="functions"><span>page</span>
+          <li class="functions_in hidden"><span>append</span></li>
+          <li class="functions_in hidden"><span>delete</span></li>
+        </ul>
+        <ul class="functions"><span>options</span>
+          <li class="functions_in hidden"><span>set clock</span></li>
+          <li class="functions_in hidden reset"><span>RESET</span></li>
+          <li class="functions_in hidden"><span>BASIC</span></li>
+          <li class="functions_in hidden"><span>shortcuts</span></li>
+          <li class="functions_in hidden"><span>BOOT</span></li>
+        </ul>
+        <div class='bar_close'></div>
+        <div class='bar_window'></div>
+        <div class='bar_down'></div>
+        <div class='calendar'></div>
+        <div class="clear"></div>
+      </div>
+      <!-- WORKSPACE & WINDOWS -->
+      <div id="workspace">
+
+        <div class="icons_basic_container">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_10.gif" class="ico_10">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_09.gif" class="ico ico_09">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_08.gif" class="ico ico_08">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_07.gif" class="ico ico_07">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_06.gif" class="ico ico_06">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_05.gif" class="ico ico_05">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_04.gif" class="ico ico_04">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_03.gif" class="ico ico_03">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_02.gif" class="ico ico_02">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_01.gif" class="ico ico_01">
+        </div>
+
+        <div class='geos_welcome_container draggable'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>Welcome to Crime Empire<p>PLEASE Log in</p><p>Project still in progress!!!</p></span>
+            <button class="button1 geos_welcome_container_button">OK</button>
+          </div>
+        </div>
+
+        <div class='geos_info_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>GEOS designed by:<p>Szymon MikoÅajczak.</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+            <button class="button1 geos_info_container_button">OK</button>
+          </div>
+        </div>
+
+        <div class='desktop_info_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>GEOS Desktop designed by:<p>Szymon MikoÅajczak.</p><p>Upgraded to V2.0</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+            <button class="button1 desktop_info_container_button">OK</button>
+          </div>
+        </div>
+
+        <div class="calculator_container draggable hidden">
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="calc_main">
+            <h5>Calculator</h5>
+            <input id="result" class="input"></input>
+            <div id="keys">
+               <div id="first_row">
+                   <button id="clearAll" type="reset" value="CE" class="clean calc_button">CE</button>
+                   <button id="clear" type="reset" value="C" class="clean calc_button">C</button>
+                   <button id="add" type="button" value="+" class="operators operand calc_button">+</button>
+               </div>
+               <div id="second_row">
+                   <button id="seven" type="button" value="7" class="show calc_button">7</button>
+                   <button id="eight" type="button" value="8" class="show calc_button">8</button>
+                   <button id="nine" type="button" value="9" class="show calc_button">9</button>
+                   <button id="sub" type="button" value="-" class="operators operand calc_button">-</button>
+               </div>
+               <div id="third_row">
+                   <button id="four" type="button" value="4" class="show calc_button">4</button>
+                   <button id="five" type="button" value="5" class="show calc_button">5</button>
+                   <button id="six" type="button" value="6" class="show calc_button">6</button>
+                   <button id="mul" type="button" value="*" class="operators operand calc_button">*</button>
+               </div>
+               <div id="fourth_row">
+                   <button id="one" type="button" value="1" class="show calc_button">1</button>
+                   <button id="two" type="button" value="2" class="show calc_button">2</button>
+                   <button id="three" type="button" value="3" class="show calc_button">3</button>
+                   <button id="divide" type="button" value="/" class="operators operand calc_button">/</button>
+               </div>
+               <div id="fifth_row">
+                   <button id="zero" type="button" value="0" class="show calc_button">0</button>
+                   <button id="dot" type="button" value="." class="show calc_button">.</button>
+                   <button id="calculate" type="button" value="=" class="operand calc_button">=</button>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='notepad_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <h5>Notepad 2.0</h5>
+          <div class="textarea_container">
+            <textarea name="notepad" rows="20" cols="37"></textarea>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="<%=request.getContextPath()%>/resources/js/app.js" type="text/javascript"></script>
+  </body>
+</html>
