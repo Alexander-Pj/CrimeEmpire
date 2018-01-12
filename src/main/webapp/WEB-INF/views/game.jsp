@@ -20,85 +20,50 @@
   <body>
     <!-- MAIN_CONTAINER -->
     <div class="main_container">
+    <span style="display: none;">
+     	    <p id="cash">${stats.cash}</p>
+            <p id="thugs">${stats.thugs}</p>
+            <p id="whores">${stats.whores}</p>
+            <p id="drugs">${stats.drugs}</p>
+    </span>
       <!-- MAIN_BAR & NAV-->
       <div class="main_bar">
-        <ul class="functions"><span>geos</span>
-          <li class="functions_in hidden geos_info"><span>geos info</span></li>
-          <li class="functions_in hidden desktop_info"><span>desktop info</span></li>
+        <ul class="functions"><span>GAME</span>
+          <li class="functions_in hidden geos_info"><span>info</span></li>
           <li class="functions_in hidden calculator"><span>calculator</span></li>
-          <li class="functions_in hidden notepad"><span>notepad 2.0</span></li>
+          <li class="functions_in hidden log out"><span><a href="/CrimeEmpire/logout">log out</a></a></span></li>
         </ul>
-        <ul class="functions"><span>file</span>
-          <li class="functions_in hidden"><span>open</span></li>
-          <li class="functions_in hidden"><span>duplicate</span></li>
-          <li class="functions_in hidden"><span>rename</span></li>
-          <li class="functions_in hidden"><span>info</span></li>
-          <li class="functions_in hidden"><span>print</span></li>
-          <li class="functions_in hidden"><span>delete</span></li>
-          <li class="functions_in hidden"><span>undo delete</span></li>
+        <ul class="functions"><span>RESOURCES</span>
+      	 <li class="functions_in hidden notepad"><span>STATS</span></li>
         </ul>
-        <ul class="functions"><span>view</span>
-          <li class="functions_in hidden"><span>by icon</span></li>
-          <li class="functions_in hidden"><span>by size</span></li>
-          <li class="functions_in hidden"><span>by type</span></li>
-          <li class="functions_in hidden"><span>by date</span></li>
-          <li class="functions_in hidden"><span>by name</span></li>
+        <ul class="functions"><span>TURN</span>
+          <li class="functions_in hidden end_turn"><span>END TURN</span></li>
         </ul>
-        <ul class="functions"><span>disc</span>
-          <li class="functions_in hidden"><span>open</span></li>
-          <li class="functions_in hidden"><span>close</span></li>
-          <li class="functions_in hidden"><span>rename</span></li>
-          <li class="functions_in hidden"><span>copy</span></li>
-          <li class="functions_in hidden"><span>validate</span></li>
-          <li class="functions_in hidden"><span>erase</span></li>
-          <li class="functions_in hidden"><span>format</span></li>
-        </ul>
-        <ul class="functions"><span>select</span>
-          <li class="functions_in hidden"><span>all pages</span></li>
-          <li class="functions_in hidden"><span>page file</span></li>
-          <li class="functions_in hidden"><span>border files</span></li>
-        </ul>
-        <ul class="functions"><span>page</span>
-          <li class="functions_in hidden"><span>append</span></li>
-          <li class="functions_in hidden"><span>delete</span></li>
-        </ul>
-        <ul class="functions"><span>options</span>
-          <li class="functions_in hidden"><span>set clock</span></li>
-          <li class="functions_in hidden reset"><span>RESET</span></li>
-          <li class="functions_in hidden"><span>BASIC</span></li>
-          <li class="functions_in hidden"><span>shortcuts</span></li>
-          <li class="functions_in hidden"><span>BOOT</span></li>
-        </ul>
-        <div class='bar_close'></div>
-        <div class='bar_window'></div>
-        <div class='bar_down'></div>
         <div class='calendar'></div>
         <div class="clear"></div>
       </div>
       <!-- WORKSPACE & WINDOWS -->
       <div id="workspace">
 
-        <div class="icons_basic_container">
+       
           <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_10.gif" class="ico_10">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_09.gif" class="ico ico_09">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_08.gif" class="ico ico_08">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_07.gif" class="ico ico_07">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_06.gif" class="ico ico_06">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_05.gif" class="ico ico_05">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_04.gif" class="ico ico_04">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_03.gif" class="ico ico_03">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_02.gif" class="ico ico_02">
-          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_01.gif" class="ico ico_01">
-        </div>
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_09.gif" class="ico_09">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_08.gif" class="ico_08">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_07.gif" class="ico_07">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_06.gif" class="ico_06">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_05.gif" class="ico_05">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_04.gif" class="ico_04">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_03.gif" class="ico_03">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_02.gif" class="ico_02">
+          <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_01.gif" class="ico_01">
 
-        <div class='geos_welcome_container draggable'>
+       
+
+        <div class='game_welcome_container draggable'>
           <div class="bar">
-            <div class='bar_close'></div>
-            <div class='bar_window'></div>
-            <div class='bar_down'></div>
           </div>
           <div class="text_area">
-            <span>Welcome to Crime Empire<p>PLEASE Log in</p><p>Project still in progress!!!</p></span>
+            <span>Welcome to Crime Empire<p>VERSION: 1.0.0</p><br><p>Project still in progress!!!</p></span>
             <button class="button1 geos_welcome_container_button">OK</button>
           </div>
         </div>
@@ -106,32 +71,36 @@
         <div class='geos_info_container draggable hidden'>
           <div class="bar">
             <div class='bar_close'></div>
-            <div class='bar_window'></div>
-            <div class='bar_down'></div>
           </div>
           <div class="text_area">
-            <span>GEOS designed by:<p>Szymon MikoÅajczak.</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+            <span>CRIME EMPIRE<p>P&A SOFTWARE</p><p>Copyright 2018</p></p></span>
             <button class="button1 geos_info_container_button">OK</button>
           </div>
         </div>
-
-        <div class='desktop_info_container draggable hidden'>
+        
+        <div class='end_turn_container draggable hidden'>
           <div class="bar">
             <div class='bar_close'></div>
-            <div class='bar_window'></div>
-            <div class='bar_down'></div>
           </div>
           <div class="text_area">
-            <span>GEOS Desktop designed by:<p>Szymon MikoÅajczak.</p><p>Upgraded to V2.0</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
-            <button class="button1 desktop_info_container_button">OK</button>
+          <span><p>ARE YOU SURE YOU WANT TO END YOUR TURN?</p><p><br></p></span>
+            <button class="button1 end_turn_container_button">END TURN</button>
+          </div>
+        </div>
+        
+        <div class='point_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+          </div>
+          <div class="text_area">
+          <span><p>ARE YOU SURE YOU WANT TO END YOUR TURN?</p><p><br></p></span>
+            <button class="button1 end_turn_container_button">END TURN</button>
           </div>
         </div>
 
         <div class="calculator_container draggable hidden">
           <div class="bar">
             <div class='bar_close'></div>
-            <div class='bar_window'></div>
-            <div class='bar_down'></div>
           </div>
           <div class="calc_main">
             <h5>Calculator</h5>
@@ -172,12 +141,15 @@
         <div class='notepad_container draggable hidden'>
           <div class="bar">
             <div class='bar_close'></div>
-            <div class='bar_window'></div>
-            <div class='bar_down'></div>
           </div>
-          <h5>Notepad 2.0</h5>
-          <div class="textarea_container">
-            <textarea name="notepad" rows="20" cols="37"></textarea>
+           <div class="text_area">
+            <span><h1>STATS</h1>
+            <p>USERNAME: ${loggedUser.userName}</p><p><br></p>
+            <p>CASH: ${stats.cash}</p>
+            <p>THUGS: ${stats.thugs}</p>
+            <p>WHORES: ${stats.whores}</p>
+            <p>DRUGS: ${stats.drugs}</p>
+            </span>
           </div>
         </div>
 

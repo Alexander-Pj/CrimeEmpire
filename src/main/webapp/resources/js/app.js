@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 //CLOCK--------------------------------------------------------------------
 function renderTime() {
 
@@ -88,7 +88,8 @@ const buttonGeosInfo = $('.geos_info');
 const butonDesktopInfo = $('.desktop_info');
 const buttonNotepad = $('.notepad');
 const buttonCalculator = $('.calculator');
-const buttonSnake = $('.snake');
+const buttonSnake = $('.end_turn');
+const buttonPoint01 = $('.ico_01');
 
 function showWindowA() {
   buttonGeosInfo.on('click', function(event){
@@ -109,14 +110,14 @@ function showWindowC() {
 }
 
 function showWindowD() {
-  buttonNotepad.on('click', function(event){
-    $('.notepad_container').removeClass('hidden');
+  buttonPoint01.on('click', function(event){
+    $('.point_container').removeClass('hidden');
   })
 }
 
 function showWindowE() {
   buttonSnake.on('click', function(event){
-    $('.snake_container').removeClass('hidden');
+    $('.end_turn_container').removeClass('hidden');
   })
 }
 
@@ -135,6 +136,14 @@ $('.geos_info_container_button').on('click', function(event) {
     })
 
 $('.desktop_info_container_button').on('click', function(event) {
+      $(this.closest('.draggable')).addClass('hidden');
+    })
+$('.end_turn_container_button').on('click', function(event){
+	var cash = $("#cash").text();
+	var thugs = $("#thugs").text();
+	var whores = $("#whores").text();
+	var drugs = $("#drugs").text();
+	$.post("save", {cash: cash, thugs: thugs, whores: whores, drugs: drugs});
       $(this.closest('.draggable')).addClass('hidden');
     })
 
@@ -286,7 +295,14 @@ $('html, body').css({
     overflow: 'hidden',
     height: '100%'
 });
-
+//SAVING GAMESTATE---------------------------------------------------------
+setInterval(function(){  
+	var cash = $("#cash").text();
+	var thugs = $("#thugs").text();
+	var whores = $("#whores").text();
+	var drugs = $("#drugs").text();
+	$.post("save", {cash: cash, thugs: thugs, whores: whores, drugs: drugs});
+	}, 300000);	
 //RENDER FUNCTIONS HERE----------------------------------------------------
 renderTime();
 dropdownMenu();

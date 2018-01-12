@@ -25,7 +25,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@EnableJpaRepositories(basePackages = "pl.clococompadres.repositories")
+@EnableJpaRepositories(basePackages = "pl.lococompadres.repositories")
 @ComponentScan(basePackages = "pl.lococompadres")
 @EnableTransactionManagement
 public class AppConfig extends WebMvcConfigurerAdapter {
